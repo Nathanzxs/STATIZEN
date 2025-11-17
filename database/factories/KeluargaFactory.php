@@ -1,0 +1,24 @@
+<?php
+
+namespace Database\Factories;
+
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Keluarga>
+ */
+class KeluargaFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array<string, mixed>
+     */
+    public function definition(): array
+    {
+        return [
+            'KK_ID' => $this->faker->unique()->numerify('################'), 
+            'Alamat' => $this->faker->address(),
+        ];
+    }
+}
